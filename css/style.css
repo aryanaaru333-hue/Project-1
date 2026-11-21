@@ -69,7 +69,7 @@ nav ul li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     padding: 120px 70px;
-    min-height: 550px;
+    min-height: 630px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,4 +121,74 @@ nav ul li a:hover {
     transform: translateY(-4px);
 }
 
+/* Why choose section */
 
+.why-choose {
+    /* background-image: linear-gradient(rgba(245, 239, 230, 0.45), rgba(245, 239, 230, 0.45)),
+    url(/assets/images/why_choose_section_bg.jpeg); */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 70px 50px;
+}
+
+.why-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.why-heading h2 {
+    color: #3e2723;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.why-heading p {
+    color: #6f5144;
+    font-size: 18px;
+}
+
+/* Feature container */
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background-color: #f5efe6;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(62, 39, 35, 0.15);
+    transition: all 0.3s ease;
+}
+
+.why-choose .feature-card svg {
+    display: inline-block;
+    font-size: 32px;
+    color: #d7b899;
+    background-color: #3e2723;
+    padding: 18px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+}
+
+.feature-card h3 {
+    color: #3e2723;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #6f5144;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(62, 39, 35, 0.25);
+}
