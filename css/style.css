@@ -3,33 +3,41 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family:Arial, sans-serif;
     background-color: #f5efe6;
     color: #3e2723;
 }
+
 header {
     background-color: #3e2723;
     padding:20px 50px;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.logo{
-    color: #f5efe6;
-    font-size: 28px;
-}
+
 nav ul {
     display: flex;
     list-style: none;
     gap: 30px;
 }
+
 nav ul li a {
     color: #f5efe6;
     text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
 }
+
+nav ul li a:hover {
+    color: #d7b899;
+}
+
 .cart-btn {
     background-color: #d7b899;
     color: #3e2723;
@@ -37,4 +45,80 @@ nav ul li a {
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
+
+.cart-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Hero section */
+
+.hero {
+    background-image: linear-gradient(rgba(62, 39, 35, 0.65), rgba(62, 39, 35, 0.65)), url(/assets/images/hero_bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 70px;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.hero h4 {
+    color: #d7b899;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    color: #f5efe6;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: #f5efe6;
+}
+
+.menu-btn {
+    background-color: #d7b899;
+    color: #3e2723;
+    padding: 14px 30px;
+    border: 2px solid #d7b899;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: transparent;
+    color: #f5efe6;
+    transform: translateY(-4px);
+}
+
+
