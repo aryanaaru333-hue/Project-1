@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family:Arial, sans-serif;
+    background-color: #f5efe6;
+    color: #3e2723;
+}
+header {
+    background-color: #3e2723;
+    padding:20px 50px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    color: #f5efe6;
+    font-size: 28px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav ul li a {
+    color: #f5efe6;
+    text-decoration: none;
+}
+.cart-btn {
+    background-color: #d7b899;
+    color: #3e2723;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
