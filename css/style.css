@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #3e2723;
+    background-color: #1A120D;
     padding:20px 50px;
 }
 
@@ -56,7 +56,7 @@ nav ul li a:hover {
 }
 
 .logo {
-    width: 200px;
+    width: 250px;
     height: auto;
     object-fit: contain;
 }
@@ -75,6 +75,26 @@ nav ul li a:hover {
     justify-content: center;
     align-items: flex-start;
     text-align: left;
+    position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, #1A120D, rgba(26,18,13,0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, rgba(26,18,13,0), #1A120D);
+  pointer-events: none;
 }
 
 .hero h4 {
@@ -92,7 +112,7 @@ nav ul li a:hover {
     margin-top: 20px;
     margin-bottom: 20px;
     max-width: 600px;
-    color: #f5efe6;
+    color: #F8F1E5;
 }
 
 .hero p {
@@ -100,7 +120,7 @@ nav ul li a:hover {
     line-height: 1.7;
     max-width: 500px;
     margin-bottom: 30px;
-    color: #f5efe6;
+    color: #CDBBA5;
 }
 
 .menu-btn {
@@ -124,9 +144,7 @@ nav ul li a:hover {
 /* Why choose section */
 
 .why-choose {
-    /* background-image: linear-gradient(rgba(245, 239, 230, 0.45), rgba(245, 239, 230, 0.45)),
-    url(/assets/images/why_choose_section_bg.jpeg); */
-
+    background-color: #1A120D;;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,14 +157,14 @@ nav ul li a:hover {
 }
 
 .why-heading h2 {
-    color: #3e2723;
-    font-size: 36px;
+    color: #F8F1E5;
+    font-size: 40px;
     margin-bottom: 15px;
 }
 
 .why-heading p {
-    color: #6f5144;
-    font-size: 18px;
+    color:  #CDBBA5;
+    font-size: 16px;
 }
 
 /* Feature container */
@@ -158,19 +176,20 @@ nav ul li a:hover {
 }
 
 .feature-card {
-    background-color: #f5efe6;
+    background-color: #35261C;
     padding: 30px 20px;
+    border: 1px solid rgba(212,175,106,.18);
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(62, 39, 35, 0.15);
+    box-shadow: 0 5px 15px #f8f1e531;
     transition: all 0.3s ease;
 }
 
 .why-choose .feature-card svg {
     display: inline-block;
     font-size: 32px;
-    color: #d7b899;
-    background-color: #3e2723;
+    color: #925416;
+    background-color: #F8F1E5;
     padding: 18px;
     border-radius: 50%;
     margin-bottom: 20px;
@@ -178,13 +197,13 @@ nav ul li a:hover {
 }
 
 .feature-card h3 {
-    color: #3e2723;
+    color: #F8F1E5;
     font-size: 20px;
     margin-bottom: 12px;
 }
 
 .feature-card p {
-    color: #6f5144;
+    color: #CDBBA5;
     font-size: 15px;
     line-height: 1.6;
 }
@@ -192,3 +211,32 @@ nav ul li a:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(62, 39, 35, 0.25);
 }
+
+/* Our Menu Section*/
+
+.menu-section{
+    background-color: #1A120D;
+    padding: 70px 50px;
+}
+
+.menu-section > h2 {
+    color: #F8F1E5;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cooffee-collection h3, .dessert-collection h3 {
+    color: #F8F1E5;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.coffee-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+
