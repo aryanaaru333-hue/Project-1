@@ -123,9 +123,30 @@ nav ul li a:hover {
     color: #CDBBA5;
 }
 
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .menu-btn {
     background-color: #d7b899;
     color: #3e2723;
+    text-decoration: none;
+    display: inline-block;
+    padding: 14px 30px;
+    border: 2px solid #d7b899;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.why-btn {
+    background-color: transparent;
+    color: #F5EFE6;
+    text-decoration: none;
+    display: inline-block;
     padding: 14px 30px;
     border: 2px solid #d7b899;
     border-radius: 30px;
@@ -139,6 +160,12 @@ nav ul li a:hover {
     background-color: transparent;
     color: #f5efe6;
     transform: translateY(-4px);
+}
+
+.why-btn:hover {
+    background-color: #d7b899;
+    color: #3e2723;
+    transform: translateY(-3px);
 }
 
 /* Why choose section */
@@ -221,12 +248,20 @@ nav ul li a:hover {
 
 .menu-section > h2 {
     color: #F8F1E5;
-    font-size: 36px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.menu-section p {
+    color: #CDBBA5;
+    font-size: 18px;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.cooffee-collection h3, .dessert-collection h3 {
+/* Coffee Collection */
+
+.coffee-collection h3, .dessert-collection h3 {
     color: #F8F1E5;
     font-size: 28px;
     text-align: center;
@@ -237,6 +272,106 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
+}
+
+.coffee-card {
+    background-color: #35261C;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px #f8f1e531;
+    transition: all 0.3s ease;
+}
+
+.coffee-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.coffee-info {
+    padding: 20px;
+}
+
+.coffee-info h4 {
+    color: #F8F1E5;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.coffee-info p {
+    color: #CDBBA5;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.coffee-info h5 {
+    color: #F8F1E5;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.coffee-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px #f8f1e531;
+}
+
+/* Dessert Collection */
+
+.dessert-collection {
+    margin-top: 70px;
+}
+
+.dessert-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Dessert  Card */
+.dessert-card {
+    background-color:  #35261C;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px #f8f1e531;
+    transition: all 0.3s ease;
+}
+
+.dessert-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.dessert-info {
+    padding: 20px;
+}
+
+.dessert-info h4 {
+    color: #F8F1E5;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.dessert-info p {
+    color: #CDBBA5;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.dessert-info h5 {
+    color: #F8F1E5;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Dessert Card Hover */
+.dessert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(62, 39, 35, 0.25);
 }
 
 
