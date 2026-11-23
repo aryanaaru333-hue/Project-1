@@ -175,7 +175,6 @@ nav ul li a:hover {
     padding: 90px 50px;
 }
 
-/* Main Layout */
 
 .why-layout {
     display: grid;
@@ -184,7 +183,6 @@ nav ul li a:hover {
     gap: 50px;
 }
 
-/* Left Heading */
 
 .why-heading {
     text-align: left;
@@ -214,7 +212,7 @@ nav ul li a:hover {
     line-height: 1.8;
 }
 
-/* Right Content Layout */
+
 
 .why-content {
     display: grid;
@@ -232,7 +230,7 @@ nav ul li a:hover {
     display: block;
 }
 
-/* Feature Cards */
+
 
 .feature-container {
     display: flex;
@@ -328,6 +326,23 @@ nav ul li a:hover {
         height: 260px;
     }
 
+}
+
+/* About Our Story Section */
+
+.about-story {
+    background-color: #f5efe6;
+    padding: 90px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+.about-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 
@@ -556,7 +571,6 @@ nav ul li a:hover {
     gap: 30px;
 }
 
-/* Dessert  Card */
 .dessert-card {
     background-color:  #35261C;
     border-radius: 15px;
@@ -595,7 +609,6 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-/* Dessert Card Hover */
 .dessert-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(62, 39, 35, 0.25);
