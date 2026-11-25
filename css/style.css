@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #1A120D;
+    background-color: #68735b;
     padding:20px 50px;
 }
 
@@ -28,20 +28,20 @@ nav ul {
 }
 
 nav ul li a {
-    color: #f5efe6;
+    color: #3e2723;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
 }
 
 nav ul li a:hover {
-    color: #d7b899;
+    color: #CDBBA5;
 }
 
 .cart-btn {
-    background-color: #d7b899;
+    background-color: #CDBBA5;
     color: #3e2723;
-    border: none;
+    border: 2px solid #CDBBA5;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
@@ -49,7 +49,7 @@ nav ul li a:hover {
 }
 
 .cart-btn:hover {
-    background-color: #ffffff;
+    background-color: transparent;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
@@ -61,10 +61,59 @@ nav ul li a:hover {
     object-fit: contain;
 }
 
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #3e2723;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
+        padding: 20px 10px;
+        text-align: left;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    .cart-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
 /* Hero section */
 
 .hero {
-    background-image: linear-gradient(rgba(62, 39, 35, 0.65), rgba(62, 39, 35, 0.65)), url(/assets/images/hero_bg.jpeg);
+    background-image: linear-gradient(rgba(62, 39, 35, 0.55), rgba(62, 39, 35, 0.55)), url(/assets/images/hero_section_bg.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -76,25 +125,6 @@ nav ul li a:hover {
     align-items: flex-start;
     text-align: left;
     position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 120px;
-  background: linear-gradient(to bottom, #1A120D, rgba(26,18,13,0));
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 160px;
-  background: linear-gradient(to bottom, rgba(26,18,13,0), #1A120D);
-  pointer-events: none;
 }
 
 .hero h4 {
@@ -112,15 +142,15 @@ nav ul li a:hover {
     margin-top: 20px;
     margin-bottom: 20px;
     max-width: 600px;
-    color: #F8F1E5;
+    color: #F5EFE6;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.7;
     max-width: 500px;
     margin-bottom: 30px;
-    color: #CDBBA5;
+    color: #F5EFE6;
 }
 
 .hero-buttons {
@@ -130,12 +160,12 @@ nav ul li a:hover {
 }
 
 .menu-btn {
-    background-color: #d7b899;
-    color: #3e2723;
+    background-color: #CDBBA5;
+    color: #35261C;
     text-decoration: none;
     display: inline-block;
     padding: 14px 30px;
-    border: 2px solid #d7b899;
+    border: 2px solid #CDBBA5;
     border-radius: 30px;
     font-size: 16px;
     font-weight: bold;
@@ -148,7 +178,7 @@ nav ul li a:hover {
     text-decoration: none;
     display: inline-block;
     padding: 14px 30px;
-    border: 2px solid #d7b899;
+    border: 2px solid #CDBBA5;
     border-radius: 30px;
     font-size: 16px;
     font-weight: bold;
@@ -158,15 +188,80 @@ nav ul li a:hover {
 
 .menu-btn:hover {
     background-color: transparent;
-    color: #f5efe6;
+    border-color: #F5EFE6;
+    color: #F5EFE6;
     transform: translateY(-4px);
 }
 
 .why-btn:hover {
-    background-color: #d7b899;
-    color: #3e2723;
+    background-color: #CDBBA5;
+    color: #F5EFE6;
     transform: translateY(-3px);
 }
+
+/* Hero Tablet Responsive */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 100px 40px;
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        max-width: 450px;
+    }
+
+    .hero-buttons {
+        gap: 15px;
+    }
+
+    .menu-btn,
+    .why-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Hero Mobile Responsive */
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 80px 22px;
+        min-height: 500px;
+    }
+
+    .hero h4 {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        max-width: 100%;
+    }
+
+    .hero p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .menu-btn,
+    .why-btn {
+        padding: 11px 20px;
+        font-size: 13px;
+    }
+}
+
 
 /* Why Choose BrewHouse Section */
 
@@ -189,7 +284,7 @@ nav ul li a:hover {
 }
 
 .why-heading h2 {
-    color: #3E2723;
+    color: #68735b;
     font-size: 36px;
     margin-bottom: 20px;
 }
@@ -200,7 +295,7 @@ nav ul li a:hover {
     display: block;
     width: 80px;
     height: 3px;
-    background-color: #b68a5a;
+    background-color: #b08a4a;
     margin-top: 15px;
     border-radius: 5px;
 }
@@ -221,13 +316,20 @@ nav ul li a:hover {
     gap: 20px;
 }
 
-.why-image-left img,
-.why-image-right img {
+.why-image-left img{
     width: 100%;
     height: 410px;
     object-fit: cover;
     border-radius: 12px;
     display: block;
+}
+
+.why-image-right img {
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 12px;
+
 }
 
 
@@ -248,7 +350,7 @@ nav ul li a:hover {
 
 .feature-card svg {
     font-size: 28px;
-    color: #8b5e3c;
+    color: #68735b;
     margin-bottom: 15px;
     display: block;
 }
@@ -323,7 +425,8 @@ nav ul li a:hover {
 
     .why-image-left img,
     .why-image-right img {
-        height: 260px;
+        height: auto;
+        object-fit: contain;
     }
 
 }
@@ -331,7 +434,7 @@ nav ul li a:hover {
 /* About Our Story Section */
 
 .about-story {
-    background-color: #f5efe6;
+    background-color: q;
     padding: 90px 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -345,12 +448,210 @@ nav ul li a:hover {
     border-radius: 12px;
 }
 
+/* About content */
+
+.about-content {
+    text-align: left;
+}
+
+.about-content h4 {
+    color: #9a7340;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.about-content h2 {
+    color: #68735b;
+    font-size: 38px;
+    margin-bottom: 22px;
+}
+
+.about-content p {
+    color: #6F5144;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* About Story Mobile Responsive */
+@media (max-width: 768px) {
+
+    .about-story {
+        grid-template-columns: 1fr;
+        padding: 50px 25px;
+        gap: 30px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+}
+
+/* Moment Worth Sharing section */
+
+.moments-section {
+    background-color: #F5EFE6;
+    padding: 90px 50px;
+}
+
+.moments-heading {
+    text-align: left;
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+.moments-heading h4 {
+    color: #9a7340;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.moments-heading h2 {
+    color: #68735b;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.moments-heading p {
+    color: #6F5144;
+    font-size: 16px;
+    line-height: 1.8;
+    width: 400px;
+}
+
+/* images*/
+.moments-gallery {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 25px;
+}
+
+.moment-large {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.moments-small {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 30px;
+}
+
+.moment-card {
+    position: relative;
+    height: 262px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.moments-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.moment-large::after,
+.moment-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+    pointer-events: none;
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+
+    .moments-section {
+        padding: 70px 30px;
+    }
+
+    .moments-heading h2 {
+        font-size: 32px;
+    }
+
+    .moments-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .moment-large {
+        height: 400px;
+    }
+
+    .moments-small {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+
+    .moment-card {
+        height: 220px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+
+    .moments-section {
+        padding: 50px 18px;
+    }
+
+    .moments-heading h4 {
+        font-size: 12px;
+    }
+
+    .moments-heading h2 {
+        font-size: 27px;
+    }
+
+    .moments-heading p {
+        font-size: 14px;
+    }
+
+    .moment-large {
+        height: 280px;
+    }
+
+    .moments-small {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 18px;
+    }
+
+    .moment-card {
+        height: 230px;
+    }
+
+    .moment-large h3 {
+        font-size: 21px;
+    }
+
+    .moment-card h3 {
+        font-size: 18px;
+    }
+}
 
 /* Popular section */
 
 .popular-picks {
     padding: 80px 50px;
-    background-color: #f5efe6;
+    background-color: #F5EFE6;
     text-align: center;
 }
 
@@ -368,7 +669,7 @@ nav ul li a:hover {
 }
 
 .popular-heading h1 {
-    color: #3e2723;
+    color: #68735b;
     font-size: 42px;
 }
 
@@ -383,7 +684,7 @@ nav ul li a:hover {
 
 .divider span {
     width: 70px;
-    height: 1px;
+    height: 2px;
     background-color: #b08a4a;
 }
 
@@ -484,7 +785,7 @@ nav ul li a:hover {
 /* Our Menu Section*/
 
 .menu-section{
-    background-color: #1A120D;
+    background-color: #68735b;
     padding: 70px 50px;
 }
 
@@ -517,7 +818,7 @@ nav ul li a:hover {
 }
 
 .coffee-card {
-    background-color: #35261C;
+    background-color: #CDBBA5;
     border-radius: 15px;
     overflow: hidden;
     text-align: center;
@@ -572,7 +873,7 @@ nav ul li a:hover {
 }
 
 .dessert-card {
-    background-color:  #35261C;
+    background-color:  #CDBBA5;
     border-radius: 15px;
     overflow: hidden;
     text-align: center;
